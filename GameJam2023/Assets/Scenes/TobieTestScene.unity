@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 38679696}
   - component: {fileID: 38679695}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 38679696}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1285551940}
+        m_TargetAssemblyTypeName: UIButtonClicks, Assembly-CSharp
+        m_MethodName: OnButton3Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &38679696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1657,7 +1669,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 905155135}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1285551940}
+        m_TargetAssemblyTypeName: UIButtonClicks, Assembly-CSharp
+        m_MethodName: OnSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &905155135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2179,7 +2203,7 @@ GameObject:
   - component: {fileID: 1039899585}
   - component: {fileID: 1039899584}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2247,7 +2271,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1039899585}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1285551940}
+        m_TargetAssemblyTypeName: UIButtonClicks, Assembly-CSharp
+        m_MethodName: OnButton2Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1039899585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2655,6 +2691,7 @@ GameObject:
   - component: {fileID: 1285551938}
   - component: {fileID: 1285551937}
   - component: {fileID: 1285551936}
+  - component: {fileID: 1285551940}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -2711,7 +2748,7 @@ Canvas:
   m_GameObject: {fileID: 1285551935}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 873841448}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -2733,8 +2770,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285551935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.01676446, y: 0.01676446, z: 0.01676446}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1701477210}
@@ -2746,8 +2783,27 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 1060, y: 596.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1285551940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285551935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b74b70f263c28479c7ca3943cbee06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 851473698}
+  button1: {fileID: 1998675560}
+  button2: {fileID: 1039899584}
+  button3: {fileID: 38679695}
+  button4: {fileID: 1689906886}
+  settingsButton: {fileID: 905155134}
+  settingsBackButton: {fileID: 1982471381}
 --- !u!1 &1314502265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3178,7 +3234,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1447347656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1285551940}
+        m_TargetAssemblyTypeName: UIButtonClicks, Assembly-CSharp
+        m_MethodName: OnUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1447347656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3865,7 +3933,7 @@ GameObject:
   - component: {fileID: 1689906887}
   - component: {fileID: 1689906886}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3933,7 +4001,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1689906887}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1285551940}
+        m_TargetAssemblyTypeName: UIButtonClicks, Assembly-CSharp
+        m_MethodName: OnButton4Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1689906887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5239,7 +5319,7 @@ GameObject:
   - component: {fileID: 1998675561}
   - component: {fileID: 1998675560}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5307,7 +5387,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1998675561}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1285551940}
+        m_TargetAssemblyTypeName: UIButtonClicks, Assembly-CSharp
+        m_MethodName: OnButton1Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1998675561
 MonoBehaviour:
   m_ObjectHideFlags: 0
