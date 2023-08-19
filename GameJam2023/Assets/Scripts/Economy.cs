@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Economy : MonoBehaviour
 {
+    public double money = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
