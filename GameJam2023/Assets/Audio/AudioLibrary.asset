@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6206c862c086f7041951901ba15b6651, type: 3}
+  m_Name: AudioLibrary
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: BackgroundMusic
+    audioClip: {fileID: 8300000, guid: 5d3235f12ba8e484d91b7575cac40bc6, type: 3}
+    loopAudio: 1
+    playOnStart: 1
+    mixerGroup: {fileID: -2534767960746754454, guid: 4b01ee50627998f4f88c342348557d67, type: 2}
+    m_AudioSource: {fileID: 0}
+  - name: Unlock
+    audioClip: {fileID: 8300000, guid: b89a11abc996c744494e55e95eac98ac, type: 3}
+    loopAudio: 0
+    playOnStart: 0
+    mixerGroup: {fileID: -8989980563628792113, guid: 4b01ee50627998f4f88c342348557d67, type: 2}
+    m_AudioSource: {fileID: 0}
+  - name: Upgrade
+    audioClip: {fileID: 8300000, guid: 4cb1dad56121c174d89b8fc860e73ccd, type: 3}
+    loopAudio: 0
+    playOnStart: 0
+    mixerGroup: {fileID: -8989980563628792113, guid: 4b01ee50627998f4f88c342348557d67, type: 2}
+    m_AudioSource: {fileID: 0}
