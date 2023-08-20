@@ -93,10 +93,8 @@ public class UIButtonClicks : MonoBehaviour
             UpdateMoney(economy.money, moneyText);
             thisButton.SetActive(false);
 
-            string b = "Button2";
-
             var parent = thisButton.GetComponentInParent<Image>();
-            var clicker = GetChildWithName(parent.gameObject, b.Remove(b.Length - 1, 1));
+            var clicker = GetChildWithName(parent.gameObject, "Button");
             var upgrade = GetChildWithName(parent.gameObject, "UpgradeButton");
             var slider = GetChildWithName(parent.gameObject, "BackgroundSlider");
 
