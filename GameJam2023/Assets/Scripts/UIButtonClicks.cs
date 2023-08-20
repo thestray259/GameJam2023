@@ -58,8 +58,8 @@ public class UIButtonClicks : MonoBehaviour
         // get current button clicked
         // get AMOUNT in children
         // GetAmount()
-        // compare to money, if money >= amount 
-        // do the upgrade, subtract amount from money and update it
+        // compare to money
+        // if money >= amount do the upgrade, subtract amount from money and update it
         // else do nothing
 
         var thisButton = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
@@ -73,6 +73,38 @@ public class UIButtonClicks : MonoBehaviour
             economy.money -= amountNum;
             UpdateMoney(economy.money, moneyText);
         }
+    }
+
+    public void OnUnlock()
+    {
+        // get current button clicked
+        // get the amount from the text
+        // compare to money
+        // if enough, unlock it, disable this button, enabled buttons underneath and clicker button, subtract from money
+
+        var thisButton = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+
+        string s = thisButton.GetComponentInChildren<TMP_Text>().text;
+        var amount = GetUnlockAmount(s);
+
+        if (economy.money >= amount)
+        {
+            economy.money -= amount;
+            UpdateMoney(economy.money, moneyText);
+            thisButton.SetActive(false);
+
+            string b = "Button2";
+
+            var parent = thisButton.GetComponentInParent<Image>();
+            var clicker = GetChildWithName(parent.gameObject, b.Remove(b.Length - 1, 1));
+            var upgrade = GetChildWithName(parent.gameObject, "UpgradeButton");
+            var slider = GetChildWithName(parent.gameObject, "BackgroundSlider");
+
+            clicker.GetComponent<Button>().interactable = true;
+            upgrade.SetActive(true);
+            slider.SetActive(true);
+        }
+
     }
 
     public void OnSettings()
@@ -91,6 +123,13 @@ public class UIButtonClicks : MonoBehaviour
     public double GetAmount(string amountGained)
     {
         string amount = amountGained.Substring(1);        
+
+        return Convert.ToDouble(amount);
+    }
+
+    public double GetUnlockAmount(string unlockAmount)
+    {
+        string amount = unlockAmount.Substring(10);
 
         return Convert.ToDouble(amount);
     }
