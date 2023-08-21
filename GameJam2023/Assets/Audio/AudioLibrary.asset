@@ -17,17 +17,31 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 5d3235f12ba8e484d91b7575cac40bc6, type: 3}
     loopAudio: 1
     playOnStart: 1
+    volume: 0.25
+    pitch: 1
     mixerGroup: {fileID: -2534767960746754454, guid: 4b01ee50627998f4f88c342348557d67, type: 2}
     m_AudioSource: {fileID: 0}
   - name: Unlock
     audioClip: {fileID: 8300000, guid: b89a11abc996c744494e55e95eac98ac, type: 3}
     loopAudio: 0
     playOnStart: 0
+    volume: 1
+    pitch: 1
     mixerGroup: {fileID: -8989980563628792113, guid: 4b01ee50627998f4f88c342348557d67, type: 2}
     m_AudioSource: {fileID: 0}
   - name: Upgrade
     audioClip: {fileID: 8300000, guid: 4cb1dad56121c174d89b8fc860e73ccd, type: 3}
     loopAudio: 0
     playOnStart: 0
+    volume: 1
+    pitch: 1
+    mixerGroup: {fileID: -8989980563628792113, guid: 4b01ee50627998f4f88c342348557d67, type: 2}
+    m_AudioSource: {fileID: 0}
+  - name: MenuButtons
+    audioClip: {fileID: 8300000, guid: 51a3092be34a6da44a8e453a3dbe699a, type: 3}
+    loopAudio: 0
+    playOnStart: 0
+    volume: 1
+    pitch: 1
     mixerGroup: {fileID: -8989980563628792113, guid: 4b01ee50627998f4f88c342348557d67, type: 2}
     m_AudioSource: {fileID: 0}
