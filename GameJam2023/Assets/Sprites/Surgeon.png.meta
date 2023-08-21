@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,7 +121,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Surgeon_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 759
+        width: 341
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af89d40b4b80a549b2423b4f6b605ce
+      internalID: -1570577232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surgeon_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 759
+        width: 341
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c45f5d494e3fa24f901438fbe303e77
+      internalID: 1514916513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surgeon_2
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 759
+        width: 341
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba43dabb7d5ccc24a89bedd2a9ffee40
+      internalID: -233068688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surgeon_3
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 407
+        width: 341
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ffc5766aa081145b961a7f3d9e99fe
+      internalID: -390382962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surgeon_4
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 407
+        width: 341
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1451c9aa6e023c04387f2850d65f044f
+      internalID: 484355409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surgeon_5
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 407
+        width: 341
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fc85c8ba6ef454b95afb0f161619db
+      internalID: -504485545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surgeon_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 55
+        width: 341
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4417aa0ec2bc6144b008e1f915ef9b5
+      internalID: 660903647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Surgeon_7
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 55
+        width: 341
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460678fb37c7ebd47935786ddf1545b7
+      internalID: -1822848831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +300,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Surgeon_0: -1570577232
+      Surgeon_1: 1514916513
+      Surgeon_2: -233068688
+      Surgeon_3: -390382962
+      Surgeon_4: 484355409
+      Surgeon_5: -504485545
+      Surgeon_6: 660903647
+      Surgeon_7: -1822848831
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
