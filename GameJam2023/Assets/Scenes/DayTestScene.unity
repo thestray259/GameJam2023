@@ -1347,63 +1347,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754351193}
   m_CullTransparentMesh: 1
---- !u!1001 &809672146
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 743811953832938074, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
-      propertyPath: m_Name
-      value: OnClick_PurchaseNoise
-      objectReference: {fileID: 0}
-    - target: {fileID: 7820130522696427100, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 505.2955
-      objectReference: {fileID: 0}
-    - target: {fileID: 7820130522696427100, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 152.55875
-      objectReference: {fileID: 0}
-    - target: {fileID: 7820130522696427100, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 391.5992
-      objectReference: {fileID: 0}
-    - target: {fileID: 7820130522696427100, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7820130522696427100, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7820130522696427100, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7820130522696427100, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7820130522696427100, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7820130522696427100, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7820130522696427100, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 10f4a0880f3c180469dbb643b3bfbd16, type: 3}
 --- !u!1 &851473696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,7 +2247,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1039899585}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1551210492436415530, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: playAudio
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Unlock
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1039899585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3236,16 +3191,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 08e7bfee3a89b2e459d44dfca067293a, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1551210492436415530, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: playAudio
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Upgrade
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1447347656
@@ -5960,7 +5915,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115172237}
   m_CullTransparentMesh: 1
---- !u!1001 &4858835637049372262
+--- !u!1001 &167658472821861712
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5968,53 +5923,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1761447605162854412, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
-      propertyPath: m_Name
-      value: Background_Music
-      objectReference: {fileID: 0}
-    - target: {fileID: 2271772319575362667, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+    - target: {fileID: 2492341409360961889, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2271772319575362667, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+    - target: {fileID: 2492341409360961889, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2271772319575362667, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+    - target: {fileID: 2492341409360961889, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2271772319575362667, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+    - target: {fileID: 2492341409360961889, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2271772319575362667, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+    - target: {fileID: 2492341409360961889, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2271772319575362667, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+    - target: {fileID: 2492341409360961889, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2271772319575362667, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+    - target: {fileID: 2492341409360961889, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2271772319575362667, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+    - target: {fileID: 2492341409360961889, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2271772319575362667, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+    - target: {fileID: 2492341409360961889, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2271772319575362667, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+    - target: {fileID: 2492341409360961889, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8171244965732933512, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
-      propertyPath: Priority
-      value: 156
+    - target: {fileID: 8938603173446791371, guid: be89e5159000fb44ca56ef952dc0d66d, type: 3}
+      propertyPath: m_Name
+      value: AudioPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6028,5 +5979,4 @@ SceneRoots:
   - {fileID: 873841449}
   - {fileID: 1285551939}
   - {fileID: 1150039106}
-  - {fileID: 4858835637049372262}
-  - {fileID: 809672146}
+  - {fileID: 167658472821861712}
