@@ -13,6 +13,11 @@ public class Sound
     public bool loopAudio = false;
     public bool playOnStart = false;
 
+    [Range(0f, 1f)]
+    public float volume;
+    [Range(0.1f, 3f)]
+    public float pitch;
+
     public AudioMixerGroup mixerGroup;
 
     [HideInInspector] 

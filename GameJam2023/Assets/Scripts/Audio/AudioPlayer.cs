@@ -32,6 +32,9 @@ public class AudioPlayer : MonoBehaviour
         {
             s.m_AudioSource = gameObject.AddComponent<AudioSource>();
             s.m_AudioSource.clip = s.audioClip;
+            s.m_AudioSource.volume = s.volume;
+            s.m_AudioSource.pitch = s.pitch;
+
             s.m_AudioSource.loop = s.loopAudio;
 
             if (s.playOnStart == true)
