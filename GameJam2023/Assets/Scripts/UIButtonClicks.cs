@@ -35,6 +35,7 @@ public class UIButtonClicks : MonoBehaviour
     public void OnButton1Click()
     {
         Debug.Log("Button1 clicked");
+        gameManager.audioPlayer.playAudio("MenuButtons");
 
         gameManager.money += gameManager.GetAmount(amountGained1.text);
         gameManager.SetMoney(gameManager.money, moneyText);
@@ -43,6 +44,7 @@ public class UIButtonClicks : MonoBehaviour
     public void OnButton2Click()
     {
         Debug.Log("Button2 clicked");
+        gameManager.audioPlayer.playAudio("MenuButtons");
 
         gameManager.money += gameManager.GetAmount(amountGained2.text);
         gameManager.SetMoney(gameManager.money, moneyText);
@@ -51,6 +53,7 @@ public class UIButtonClicks : MonoBehaviour
     public void OnButton3Click()
     {
         Debug.Log("Button3 clicked");
+        gameManager.audioPlayer.playAudio("MenuButtons");
 
         gameManager.money += gameManager.GetAmount(amountGained3.text);
         gameManager.SetMoney(gameManager.money, moneyText);
@@ -59,6 +62,7 @@ public class UIButtonClicks : MonoBehaviour
     public void OnButton4Click()
     {
         Debug.Log("Button4 clicked");
+        gameManager.audioPlayer.playAudio("MenuButtons");
 
         gameManager.money += gameManager.GetAmount(amountGained4.text);
         gameManager.SetMoney(gameManager.money, moneyText);
@@ -81,6 +85,7 @@ public class UIButtonClicks : MonoBehaviour
 
         if (gameManager.money >= amountNum)
         {
+            gameManager.audioPlayer.playAudio("Upgrade");
             gameManager.money -= amountNum;
             gameManager.SetMoney(gameManager.money, moneyText);
 
@@ -142,6 +147,7 @@ public class UIButtonClicks : MonoBehaviour
 
         if (gameManager.money >= amount)
         {
+            gameManager.audioPlayer.playAudio("Unlock");
             gameManager.money -= amount;
             gameManager.SetMoney(gameManager.money, moneyText);
             thisButton.SetActive(false);
