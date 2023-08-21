@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioPlayer audioPlayer;
+
     [SerializeField] Image foreground1;
     [SerializeField] Image foreground2;
     [SerializeField] Image foreground3;
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this);
+        audioPlayer = GameObject.Find("AudioPlayer").GetComponent<AudioPlayer>();
     }
 
     void Update()
