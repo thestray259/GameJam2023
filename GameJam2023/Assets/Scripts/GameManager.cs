@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateMoney(double money, TMP_Text moneyText)
     {
+        money = Math.Round(money, 2);
         moneyText.text = money.ToString();
     }
 
