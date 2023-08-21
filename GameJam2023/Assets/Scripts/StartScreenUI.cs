@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartScreenUI : MonoBehaviour
 {
@@ -35,5 +36,13 @@ public class StartScreenUI : MonoBehaviour
     {
         audioPlayer.playAudio("MenuButtons");
         OptionsMenu.SetActive(false);
+    }
+
+    public void OnMasterVolumeChanged()
+    {
+        var thisSlider = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+        var value = thisSlider.GetComponent<Slider>().value;
+
+        audioPlayer.SetMaster(value);
     }
 }
