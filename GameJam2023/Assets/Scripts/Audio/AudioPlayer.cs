@@ -73,4 +73,24 @@ public class AudioPlayer : MonoBehaviour
         }
         
     }
+
+    public void stopAudio(string name)
+    {
+        foreach (Sound s in audioLib.sounds)
+        {
+            if (s.name == name)
+            {
+                s.m_AudioSource.Stop();
+            }
+
+            if (s == null) return;
+
+        }
+
+    }
+
+    public void StopAll()
+    {
+        foreach (var s in audioLib.sounds) s.m_AudioSource.Stop();
+    }
 }
