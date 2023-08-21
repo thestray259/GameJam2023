@@ -23,7 +23,7 @@ public class UIButtonClicks : MonoBehaviour
 
     [SerializeField] GameObject settingsMenu;
 
-    [SerializeField] Economy economy;
+    //[SerializeField] Economy economy;
 
     private GameManager gameManager;
 
@@ -32,32 +32,36 @@ public class UIButtonClicks : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    public void UpdateMoney(double money, TMP_Text moneyText)
-    {
-        moneyText.text = money.ToString();
-    }
-
     public void OnButton1Click()
     {
         Debug.Log("Button1 clicked");
 
-        economy.money += GetAmount(amountGained1.text);
-        UpdateMoney(economy.money, moneyText);
+        gameManager.money += gameManager.GetAmount(amountGained1.text);
+        gameManager.UpdateMoney(gameManager.money, moneyText);
     }
 
     public void OnButton2Click()
     {
         Debug.Log("Button2 clicked");
+
+        gameManager.money += gameManager.GetAmount(amountGained2.text);
+        gameManager.UpdateMoney(gameManager.money, moneyText);
     }
 
     public void OnButton3Click()
     {
         Debug.Log("Button3 clicked");
+
+        gameManager.money += gameManager.GetAmount(amountGained3.text);
+        gameManager.UpdateMoney(gameManager.money, moneyText);
     }
 
     public void OnButton4Click()
     {
         Debug.Log("Button4 clicked");
+
+        gameManager.money += gameManager.GetAmount(amountGained4.text);
+        gameManager.UpdateMoney(gameManager.money, moneyText);
     }
 
     public void OnUpgrade()
@@ -73,52 +77,54 @@ public class UIButtonClicks : MonoBehaviour
 
         var amountObject = GetChildWithName(thisButton, "AMOUNT");
         string s = amountObject.GetComponent<TMP_Text>().text;
-        var amountNum = GetAmount(s);
+        var amountNum = gameManager.GetAmount(s);
 
-        if (economy.money >= amountNum)
+        if (gameManager.money >= amountNum)
         {
-            economy.money -= amountNum;
-            UpdateMoney(economy.money, moneyText);
-        }
+            gameManager.money -= amountNum;
+            gameManager.UpdateMoney(gameManager.money, moneyText);
 
+            // increase upgrade amount
+            amountNum *= 1.75;
+            amountNum = Math.Round(amountNum, 2);
+            amountObject.GetComponent<TMP_Text>().text = "$" + amountNum;
 
-        // increase upgrade amount
-        amountNum *= 1.75;
-        amountNum = Math.Round(amountNum, 2);
-        amountObject.GetComponent<TMP_Text>().text = "$" + amountNum;
-        
-        // increase gain amount
-        var parent = thisButton.GetComponentInParent<Image>();
-        var backgroundSlider = GetChildWithName(parent.gameObject, "BackgroundSlider");
-        var foregroundSlider = GetChildWithName(backgroundSlider, "ForegroundSlider");
-        var amountGained = GetChildWithName(foregroundSlider, "AmountGained");
-        var text = amountGained.GetComponent<TMP_Text>().text;
+            // increase gain amount
+            var a = GetNumInName(thisButton.name);
+            GameObject parent = null;
 
-        var amountGainedNum = GetAmount(text);
-        amountGainedNum *= 1.75;
-        amountGainedNum = Math.Round(amountGainedNum, 2);
-        amountGained.GetComponent<TMP_Text>().text = "$" + (amountGainedNum * 1.75);
+            switch (a)
+            {
+                case 1:
+                    parent = GameObject.Find("Button1Background");
+                    gameManager.sliderOn1 = true;
+                    break;
+                case 2:
+                    parent = GameObject.Find("Button2Background");
+                    gameManager.sliderOn2 = true;
+                    break;
+                case 3:
+                    parent = GameObject.Find("Button3Background");
+                    gameManager.sliderOn3 = true;
+                    break;
+                case 4:
+                    parent = GameObject.Find("Button4Background");
+                    gameManager.sliderOn4 = true;
+                    break;
+                default:
+                    Debug.Log("Problem with getting num in parent name");
+                    break;
+            }
 
-        // get the num in the parent name, use that to figure out which slider to start
-        var parentNum = GetNumInName(parent.name);
+            var backgroundSlider = GetChildWithName(parent, "BackgroundSlider");
+            var foregroundSlider = GetChildWithName(backgroundSlider, "ForegroundSlider");
+            var amountGained = GetChildWithName(foregroundSlider, "AmountGained");
+            var text = amountGained.GetComponent<TMP_Text>().text;
 
-        switch  (parentNum) 
-        {
-            case 1:
-                gameManager.sliderOn1 = true;
-                break;
-            case 2:
-                gameManager.sliderOn2 = true;
-                break;
-            case 3:
-                gameManager.sliderOn3 = true;
-                break;
-            case 4:
-                gameManager.sliderOn4 = true;
-                break;
-            default:
-                Debug.Log("Problem with getting num in parent name");
-                break;
+            var amountGainedNum = gameManager.GetAmount(text);
+            amountGainedNum *= 1.75;
+            amountGainedNum = Math.Round(amountGainedNum, 2);
+            amountGained.GetComponent<TMP_Text>().text = "$" + amountGainedNum;
         }
     }
 
@@ -134,16 +140,43 @@ public class UIButtonClicks : MonoBehaviour
         string s = thisButton.GetComponentInChildren<TMP_Text>().text;
         var amount = GetUnlockAmount(s);
 
-        if (economy.money >= amount)
+        if (gameManager.money >= amount)
         {
-            economy.money -= amount;
-            UpdateMoney(economy.money, moneyText);
+            gameManager.money -= amount;
+            gameManager.UpdateMoney(gameManager.money, moneyText);
             thisButton.SetActive(false);
 
-            var parent = thisButton.GetComponentInParent<Image>();
-            var clicker = GetChildWithName(parent.gameObject, "Button");
-            var upgrade = GetChildWithName(parent.gameObject, "UpgradeButton");
-            var slider = GetChildWithName(parent.gameObject, "BackgroundSlider");
+            var a = GetNumInName(thisButton.name);
+            GameObject parent = null;
+            string upgradeName = "";
+
+            switch (a)
+            {
+                case 1:
+                    parent = GameObject.Find("Button1Background");
+                    upgradeName = "UpgradeButton1";
+                    break;
+                case 2:
+                    parent = GameObject.Find("Button2Background");
+                    upgradeName = "UpgradeButton2";
+                    break;
+                case 3:
+                    parent = GameObject.Find("Button3Background");
+                    upgradeName = "UpgradeButton3";
+                    break;
+                case 4:
+                    parent = GameObject.Find("Button4Background");
+                    upgradeName = "UpgradeButton4";
+                    break;
+                default:
+                    Debug.Log("Problem with getting num in parent name");
+                    break;
+            }
+
+            //var parent = GetParentWithImage(thisButton);
+            var clicker = GetChildWithName(parent, "Button");
+            var upgrade = GetChildWithName(parent, upgradeName);
+            var slider = GetChildWithName(parent, "BackgroundSlider");
 
             clicker.GetComponent<Button>().interactable = true;
             upgrade.SetActive(true);
@@ -165,13 +198,6 @@ public class UIButtonClicks : MonoBehaviour
     }
 
     // HELPERS
-    public double GetAmount(string amountGained)
-    {
-        string amount = amountGained.Substring(1);        
-
-        return Convert.ToDouble(amount);
-    }
-
     public double GetUnlockAmount(string unlockAmount)
     {
         string amount = unlockAmount.Substring(10);
@@ -198,5 +224,12 @@ public class UIButtonClicks : MonoBehaviour
         string num = Regex.Replace(name, "[^0-9]", "");
 
         return Convert.ToInt32(num);
+    }
+
+    Image GetParentWithImage(GameObject gameObject)
+    {
+        Image parent = gameObject.GetComponentInParent<Image>();
+
+        return parent;
     }
 }

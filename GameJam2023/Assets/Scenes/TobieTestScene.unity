@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 366208134}
   - component: {fileID: 366208133}
   m_Layer: 5
-  m_Name: UpgradeButton
+  m_Name: UpgradeButton4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -942,7 +942,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 366208134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1285551940}
+        m_TargetAssemblyTypeName: UIButtonClicks, Assembly-CSharp
+        m_MethodName: OnUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &366208134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,10 +1236,16 @@ MonoBehaviour:
   foreground2: {fileID: 2098051877}
   foreground3: {fileID: 2089788582}
   foreground4: {fileID: 913649180}
+  amountGained1: {fileID: 1912832738}
+  amountGained2: {fileID: 1314502267}
+  amountGained3: {fileID: 1326484206}
+  amountGained4: {fileID: 1484616708}
+  moneyText: {fileID: 851473698}
   sliderOn1: 0
   sliderOn2: 0
   sliderOn3: 0
   sliderOn4: 0
+  money: 0
 --- !u!4 &724949923
 Transform:
   m_ObjectHideFlags: 0
@@ -1906,7 +1924,7 @@ GameObject:
   - component: {fileID: 947656203}
   - component: {fileID: 947656202}
   m_Layer: 5
-  m_Name: UpgradeButton
+  m_Name: UpgradeButton3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1976,7 +1994,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 947656203}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1285551940}
+        m_TargetAssemblyTypeName: UIButtonClicks, Assembly-CSharp
+        m_MethodName: OnUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &947656203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2904,7 +2934,6 @@ MonoBehaviour:
   settingsButton: {fileID: 905155134}
   settingsBackButton: {fileID: 1982471381}
   settingsMenu: {fileID: 125535307}
-  economy: {fileID: 63654217}
 --- !u!1 &1314502265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,7 +3294,7 @@ GameObject:
   - component: {fileID: 1447347656}
   - component: {fileID: 1447347655}
   m_Layer: 5
-  m_Name: UpgradeButton
+  m_Name: UpgradeButton1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4587,7 +4616,7 @@ GameObject:
   - component: {fileID: 1832850554}
   - component: {fileID: 1832850553}
   m_Layer: 5
-  m_Name: UpgradeButton
+  m_Name: UpgradeButton2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4657,7 +4686,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1832850554}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1285551940}
+        m_TargetAssemblyTypeName: UIButtonClicks, Assembly-CSharp
+        m_MethodName: OnUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1832850554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4977,7 +5018,7 @@ GameObject:
   - component: {fileID: 1938267642}
   - component: {fileID: 1938267641}
   m_Layer: 5
-  m_Name: UnlockButton
+  m_Name: UnlockButton4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5110,7 +5151,7 @@ GameObject:
   - component: {fileID: 1952637852}
   - component: {fileID: 1952637851}
   m_Layer: 5
-  m_Name: UnlockButton
+  m_Name: UnlockButton2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5584,7 +5625,7 @@ GameObject:
   - component: {fileID: 2077489472}
   - component: {fileID: 2077489471}
   m_Layer: 5
-  m_Name: UnlockButton
+  m_Name: UnlockButton3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
