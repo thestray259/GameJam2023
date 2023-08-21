@@ -37,7 +37,7 @@ public class UIButtonClicks : MonoBehaviour
         Debug.Log("Button1 clicked");
 
         gameManager.money += gameManager.GetAmount(amountGained1.text);
-        gameManager.UpdateMoney(gameManager.money, moneyText);
+        gameManager.SetMoney(gameManager.money, moneyText);
     }
 
     public void OnButton2Click()
@@ -45,7 +45,7 @@ public class UIButtonClicks : MonoBehaviour
         Debug.Log("Button2 clicked");
 
         gameManager.money += gameManager.GetAmount(amountGained2.text);
-        gameManager.UpdateMoney(gameManager.money, moneyText);
+        gameManager.SetMoney(gameManager.money, moneyText);
     }
 
     public void OnButton3Click()
@@ -53,7 +53,7 @@ public class UIButtonClicks : MonoBehaviour
         Debug.Log("Button3 clicked");
 
         gameManager.money += gameManager.GetAmount(amountGained3.text);
-        gameManager.UpdateMoney(gameManager.money, moneyText);
+        gameManager.SetMoney(gameManager.money, moneyText);
     }
 
     public void OnButton4Click()
@@ -61,7 +61,7 @@ public class UIButtonClicks : MonoBehaviour
         Debug.Log("Button4 clicked");
 
         gameManager.money += gameManager.GetAmount(amountGained4.text);
-        gameManager.UpdateMoney(gameManager.money, moneyText);
+        gameManager.SetMoney(gameManager.money, moneyText);
     }
 
     public void OnUpgrade()
@@ -82,7 +82,7 @@ public class UIButtonClicks : MonoBehaviour
         if (gameManager.money >= amountNum)
         {
             gameManager.money -= amountNum;
-            gameManager.UpdateMoney(gameManager.money, moneyText);
+            gameManager.SetMoney(gameManager.money, moneyText);
 
             // increase upgrade amount
             amountNum *= 1.75;
@@ -143,7 +143,7 @@ public class UIButtonClicks : MonoBehaviour
         if (gameManager.money >= amount)
         {
             gameManager.money -= amount;
-            gameManager.UpdateMoney(gameManager.money, moneyText);
+            gameManager.SetMoney(gameManager.money, moneyText);
             thisButton.SetActive(false);
 
             var a = GetNumInName(thisButton.name);
@@ -231,5 +231,12 @@ public class UIButtonClicks : MonoBehaviour
         Image parent = gameObject.GetComponentInParent<Image>();
 
         return parent;
+    }
+
+    public float GetUpgradeAmount()
+    {
+
+
+        return 1;
     }
 }
