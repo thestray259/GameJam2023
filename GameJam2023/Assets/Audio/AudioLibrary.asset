@@ -37,8 +37,16 @@ MonoBehaviour:
     pitch: 1
     mixerGroup: {fileID: -8989980563628792113, guid: 4b01ee50627998f4f88c342348557d67, type: 2}
     m_AudioSource: {fileID: 0}
-  - name: MenuButtons
+  - name: StartButton
     audioClip: {fileID: 8300000, guid: 51a3092be34a6da44a8e453a3dbe699a, type: 3}
+    loopAudio: 0
+    playOnStart: 0
+    volume: 1
+    pitch: 1
+    mixerGroup: {fileID: -8989980563628792113, guid: 4b01ee50627998f4f88c342348557d67, type: 2}
+    m_AudioSource: {fileID: 0}
+  - name: MenuButtons
+    audioClip: {fileID: 8300000, guid: 1a5b6621fc325384298e02535a16b20f, type: 3}
     loopAudio: 0
     playOnStart: 0
     volume: 1

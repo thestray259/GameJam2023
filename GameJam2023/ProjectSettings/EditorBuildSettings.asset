@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
-    path: Assets/Scenes/TobieTestScene.unity
-    guid: 0bb250d4c0810804ca5b5485af49b8de
-  - enabled: 1
     path: Assets/Scenes/StartScreen.unity
     guid: 5353aaaca94e0c1498d9ea7c8f10c472
+  - enabled: 1
+    path: Assets/Scenes/TobieTestScene.unity
+    guid: 0bb250d4c0810804ca5b5485af49b8de
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 7fa9679d9bd686c4ea83fecd13b44ffc, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 9501ed4594cfca74ea324fc5d408f63a, type: 2}
