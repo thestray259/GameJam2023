@@ -1191,6 +1191,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535420945}
   m_CullTransparentMesh: 1
+--- !u!1 &724949921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 724949923}
+  - component: {fileID: 724949922}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &724949922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724949921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2bb86959ee75543a240c899432a784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foreground1: {fileID: 319402337}
+  foreground2: {fileID: 2098051877}
+  foreground3: {fileID: 2089788582}
+  foreground4: {fileID: 913649180}
+  sliderOn1: 0
+  sliderOn2: 0
+  sliderOn3: 0
+  sliderOn4: 0
+--- !u!4 &724949923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724949921}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.014030247, y: 0.2531084, z: 0.04504037}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &752478703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,7 +2917,7 @@ GameObject:
   - component: {fileID: 1314502268}
   - component: {fileID: 1314502267}
   m_Layer: 5
-  m_Name: AmountGained2
+  m_Name: AmountGained
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2999,7 +3051,7 @@ GameObject:
   - component: {fileID: 1326484207}
   - component: {fileID: 1326484206}
   m_Layer: 5
-  m_Name: AmountGained3
+  m_Name: AmountGained
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3480,7 +3532,7 @@ GameObject:
   - component: {fileID: 1484616709}
   - component: {fileID: 1484616708}
   m_Layer: 5
-  m_Name: AmountGained4
+  m_Name: AmountGained
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4656,7 +4708,7 @@ GameObject:
   - component: {fileID: 1912832739}
   - component: {fileID: 1912832738}
   m_Layer: 5
-  m_Name: AmountGained1
+  m_Name: AmountGained
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6082,3 +6134,4 @@ SceneRoots:
   - {fileID: 1285551939}
   - {fileID: 1150039106}
   - {fileID: 63654216}
+  - {fileID: 724949923}

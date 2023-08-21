@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,6 +24,13 @@ public class UIButtonClicks : MonoBehaviour
     [SerializeField] GameObject settingsMenu;
 
     [SerializeField] Economy economy;
+
+    private GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     public void UpdateMoney(double money, TMP_Text moneyText)
     {
@@ -60,7 +68,6 @@ public class UIButtonClicks : MonoBehaviour
         // GetAmount()
         // compare to money
         // if money >= amount do the upgrade, subtract amount from money and update it
-        // else do nothing
 
         var thisButton = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
 
@@ -72,6 +79,46 @@ public class UIButtonClicks : MonoBehaviour
         {
             economy.money -= amountNum;
             UpdateMoney(economy.money, moneyText);
+        }
+
+
+        // increase upgrade amount
+        amountNum *= 1.75;
+        amountNum = Math.Round(amountNum, 2);
+        amountObject.GetComponent<TMP_Text>().text = "$" + amountNum;
+        
+        // increase gain amount
+        var parent = thisButton.GetComponentInParent<Image>();
+        var backgroundSlider = GetChildWithName(parent.gameObject, "BackgroundSlider");
+        var foregroundSlider = GetChildWithName(backgroundSlider, "ForegroundSlider");
+        var amountGained = GetChildWithName(foregroundSlider, "AmountGained");
+        var text = amountGained.GetComponent<TMP_Text>().text;
+
+        var amountGainedNum = GetAmount(text);
+        amountGainedNum *= 1.75;
+        amountGainedNum = Math.Round(amountGainedNum, 2);
+        amountGained.GetComponent<TMP_Text>().text = "$" + (amountGainedNum * 1.75);
+
+        // get the num in the parent name, use that to figure out which slider to start
+        var parentNum = GetNumInName(parent.name);
+
+        switch  (parentNum) 
+        {
+            case 1:
+                gameManager.sliderOn1 = true;
+                break;
+            case 2:
+                gameManager.sliderOn2 = true;
+                break;
+            case 3:
+                gameManager.sliderOn3 = true;
+                break;
+            case 4:
+                gameManager.sliderOn4 = true;
+                break;
+            default:
+                Debug.Log("Problem with getting num in parent name");
+                break;
         }
     }
 
@@ -132,10 +179,10 @@ public class UIButtonClicks : MonoBehaviour
         return Convert.ToDouble(amount);
     }
 
-    GameObject GetChildWithName(GameObject obj, string name)
+    GameObject GetChildWithName(GameObject parent, string name)
     {
-        Transform trans = obj.transform;
-        Transform childTrans = trans.Find(name);
+        Transform parentTrans = parent.transform;
+        Transform childTrans = parentTrans.Find(name);
         if (childTrans != null)
         {
             return childTrans.gameObject;
@@ -146,5 +193,10 @@ public class UIButtonClicks : MonoBehaviour
         }
     }
 
+    int GetNumInName(string name)
+    {
+        string num = Regex.Replace(name, "[^0-9]", "");
 
+        return Convert.ToInt32(num);
+    }
 }
